@@ -55,3 +55,9 @@ function applySlide() {
   bannerText.innerHTML = tagLine; // innerHTML pour conserver le <span>
   updateDots();
 }
+
+// Va à une slide (avec boucle infinie)
+function goToSlide(index) {
+  currentIndex = (index + slides.length) % slides.length;
+  applySlide();
+}
