@@ -65,3 +65,7 @@ function goToSlide(index) {
 // Listeners flèches
 arrowLeft.addEventListener('click',  () => goToSlide(currentIndex - 1));
 arrowRight.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+// Init
+renderDots();
+applySlide();
