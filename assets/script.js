@@ -26,3 +26,15 @@ const arrowRight = banner.querySelector('.arrow_right');
 
 // Index de la slide affichée
 let currentIndex = 0;
+
+// Crée les bullets en fonction du nombre d'éléments dans `slides`
+function renderDots() {
+  dotsContainer.innerHTML = '';
+  for (let i = 0; i < slides.length; i++) {
+    const dot = document.createElement('span');   // CSS: .dot / .dot_selected
+    dot.classList.add('dot');
+    if (i === currentIndex) dot.classList.add('dot_selected');
+    dot.addEventListener('click', () => goToSlide(i)); // clic direct sur un point
+    dotsContainer.appendChild(dot);
+  }
+}
