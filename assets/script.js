@@ -38,3 +38,12 @@ function renderDots() {
     dotsContainer.appendChild(dot);
   }
 }
+
+// Met à jour l'état des bullets
+function updateDots() {
+  const allDots = dotsContainer.querySelectorAll('.dot');
+  allDots.forEach((d, i) => {
+    if (i === currentIndex) d.classList.add('dot_selected');
+    else d.classList.remove('dot_selected');
+  });
+}
