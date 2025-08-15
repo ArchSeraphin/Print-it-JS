@@ -47,3 +47,11 @@ function updateDots() {
     else d.classList.remove('dot_selected');
   });
 }
+
+// Applique l’image + le texte de la slide courante
+function applySlide() {
+  const { image, tagLine } = slides[currentIndex];
+  bannerImg.src = `./assets/images/slideshow/${image}`; // chemin correct
+  bannerText.innerHTML = tagLine; // innerHTML pour conserver le <span>
+  updateDots();
+}
