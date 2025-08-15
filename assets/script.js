@@ -61,3 +61,7 @@ function goToSlide(index) {
   currentIndex = (index + slides.length) % slides.length;
   applySlide();
 }
+
+// Listeners flèches
+arrowLeft.addEventListener('click',  () => goToSlide(currentIndex - 1));
+arrowRight.addEventListener('click', () => goToSlide(currentIndex + 1));
